@@ -16,11 +16,10 @@
 </head>
 
 <body>
-
+    <div class="container-fluid p-2 bg-primary text-white text-center">
+        <h1>Abstracción en PHP</h1>
+    </div>
     <div class="container mt-5">
-        <div class="container-fluid p-2 bg-primary text-white text-center">
-            <h1>Abstracción en PHP</h1>
-        </div>
 
         <p><strong>Abstracción</strong> en programación es como usar una mezcladora de cemento sin saber cómo funciona por dentro. Solo usamos los controles importantes.</p>
 
@@ -31,28 +30,31 @@
                 Código en PHP (ejemplo de abstracción)
             </div>
             <div class="card-body bg-light">
-<pre><code>&lt;?php
-abstract class Mezcladora {
-    abstract public function encender();
-    abstract public function mezclar();
-    abstract public function apagar();
-}
+            <pre><code>
+                ?php
 
-class MezcladoraConcreta extends Mezcladora {
-    public function encender() {
-        return "Mezcladora encendida.";
-    }
+                    abstract class Mezcladora {
+                        abstract public function encender();
+                        abstract public function mezclar();
+                        abstract public function apagar();
+                    }
 
-    public function mezclar() {
-        return "Mezclando materiales...";
-    }
+                    class MezcladoraConcreta extends Mezcladora {
+                        public function encender() {
+                            return "Mezcladora encendida.";
+                        }
 
-    public function apagar() {
-        return "Mezcladora apagada.";
-    }
-}
-?&gt;
-</code></pre>
+                        public function mezclar() {
+                            return "Mezclando materiales...";
+                        }
+
+                        public function apagar() {
+                            return "Mezcladora apagada.";
+                        }
+                    }
+
+                ?>
+            </code></pre>
             </div>
         </div>
 
@@ -65,7 +67,7 @@ class MezcladoraConcreta extends Mezcladora {
             <p>Interactuá con una mezcladora (abstraída)</p>
         </div>
 
-        <form method="post" class="text-center mt-4">
+        <form method="POST" class="text-center mt-4">
             <button type="submit" name="encender" class="btn btn-success m-2">Encender</button>
             <button type="submit" name="mezclar" class="btn btn-primary m-2">Mezclar</button>
             <button type="submit" name="apagar" class="btn btn-danger m-2">Apagar</button>

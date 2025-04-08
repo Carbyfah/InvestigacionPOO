@@ -16,11 +16,11 @@
 </head>
 
 <body>
-
+    <div class="container-fluid p-2 bg-primary text-white text-center">
+        <h1>Cohesión en PHP</h1>
+    </div>
+    
     <div class="container mt-5">
-        <div class="container-fluid p-2 bg-primary text-white text-center">
-            <h1>Cohesión en PHP</h1>
-        </div>
 
         <p><strong>Cohesión</strong> en programación significa que una clase debe tener un único propósito claro.</p>
 
@@ -34,22 +34,25 @@
                 Código en PHP (buena cohesión)
             </div>
             <div class="card-body bg-light">
-<pre><code>&lt;?php
-class MezcladorDeCemento {
-    public function agregarArena() {
-        return "Agregando arena...";
-    }
+                <pre><code>
+                ?php
+                    
+                    class MezcladorDeCemento {
+                        public function agregarArena() {
+                            return "Agregando arena...";
+                        }
 
-    public function agregarCemento() {
-        return "Agregando cemento...";
-    }
+                        public function agregarCemento() {
+                            return "Agregando cemento...";
+                        }
 
-    public function mezclar() {
-        return "Mezclando los materiales...";
-    }
-}
-?&gt;
-</code></pre>
+                        public function mezclar() {
+                            return "Mezclando los materiales...";
+                        }
+                    }
+
+                ?>
+                </code></pre>
             </div>
         </div>
 
@@ -62,7 +65,7 @@ class MezcladorDeCemento {
             <p>Interactuá con un mezclador de cemento cohesivo</p>
         </div>
 
-        <form method="post" class="text-center mt-4">
+        <form method="POST" class="text-center mt-4">
             <button type="submit" name="arena" class="btn btn-secondary m-2">Agregar Arena</button>
             <button type="submit" name="cemento" class="btn btn-dark m-2">Agregar Cemento</button>
             <button type="submit" name="mezclar" class="btn btn-success m-2">Mezclar</button>

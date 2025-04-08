@@ -16,11 +16,10 @@
 </head>
 
 <body>
-
-    <div class="container mt-5">
-        <div class="container-fluid p-2 bg-primary text-white text-center">
+    <div class="container-fluid p-2 bg-primary text-white text-center">
             <h1>Polimorfismo en PHP</h1>
-        </div>
+    </div>
+    <div class="container mt-5">
 
         <p><strong>Polimorfismo</strong> es como tener diferentes tipos de puertas en una casa. Todas se pueden abrir, pero cada una lo hace de forma distinta.</p>
 
@@ -31,7 +30,9 @@
                 Código en PHP (ejemplo de polimorfismo)
             </div>
             <div class="card-body bg-light">
-                <pre><code>&lt;?php
+                <pre><code> 
+                ?php
+
                 class Puerta {
                     public function abrir() {
                         return "Abriendo una puerta genérica.";
@@ -55,7 +56,8 @@
                         return "Activando el sensor de la puerta automática.";
                     }
                 }
-                ?&gt;
+
+                ?>
                 </code></pre>
             </div>
         </div>
@@ -69,7 +71,7 @@
             <p>Probá abrir distintos tipos de puertas</p>
         </div>
 
-        <form method="post" class="text-center mt-4">
+        <form method="POST" class="text-center mt-4">
             <button type="submit" name="madera" class="btn btn-success m-2">Abrir Puerta de Madera</button>
             <button type="submit" name="vidrio" class="btn btn-info m-2">Abrir Puerta de Vidrio</button>
             <button type="submit" name="automatica" class="btn btn-warning m-2">Abrir Puerta Automática</button>

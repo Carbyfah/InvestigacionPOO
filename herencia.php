@@ -17,14 +17,15 @@
 </head>
 
 <body>
+    <div class="container-fluid p-2 bg-primary text-white text-center">
+        <h1>Herencia en PHP</h1>
+    </div>
+    
     <div class="container mt-5">
-        <div class="container-fluid p-2 bg-primary text-white text-center">
-            <h1>Herencia en PHP</h1>
-        </div>
-
+        
         <p><strong>Herencia</strong> en programación se parece a cuando construimos varias casas a partir de un mismo plano base.</p>
 
-        <p>Imaginá que tenemos una clase general llamada <strong>Casa</strong>, que define lo básico que todas las casas tienen: paredes, techo, y puertas.</p>
+        <p>Imaginá que tenemos una clase general llamada <strong>Casa</strong>, que define lo básico que todas las casas tienen: paredes, techo y puertas.</p>
 
         <p>Después, creamos una clase llamada <strong>CasaDeDosPisos</strong>, que hereda todas las características de la clase <code>Casa</code>, pero además le agregamos un segundo piso y un balcón.</p>
 
@@ -33,7 +34,9 @@
                 Código en PHP (ejemplo de herencia)
             </div>
             <div class="card-body bg-light">
-                <pre><code>&lt;?php
+                <pre><code>
+                ?php
+
                 class Casa {
                     public function construir() {
                         echo "Construyendo paredes, techo y puertas.";
@@ -47,13 +50,12 @@
                 }
 
                 $miCasa = new Casa();
-                $miCasa-&gt;construir(); // Construyendo paredes, techo y puertas.
-
-                echo "&lt;br&gt;";
+                $miCasa->construir(); // Construyendo paredes, techo y puertas.
 
                 $miCasaModerna = new CasaDeDosPisos();
-                $miCasaModerna-&gt;construir(); // Construyendo paredes, techo, puertas, segundo piso y balcón.
-                ?&gt;
+                $miCasaModerna->construir(); // Construyendo paredes, techo, puertas, segundo piso y balcón.
+
+                ?>
                 </code></pre>
             </div>
         </div>
@@ -69,7 +71,7 @@
             <p>Construcción interactiva de casas</p>
         </div>
 
-        <form method="post" class="text-center mt-4">
+        <form method="POST" class="text-center mt-4">
             <button type="submit" name="casa" class="btn btn-success m-2">Construir Casa</button>
             <button type="submit" name="casa_dos_pisos" class="btn btn-warning m-2">Construir Casa de Dos Pisos</button>
         </form>

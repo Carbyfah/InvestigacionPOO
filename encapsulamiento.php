@@ -16,11 +16,10 @@
 </head>
 
 <body>
-
+    <div class="container-fluid p-2 bg-primary text-white text-center">
+        <h1>Encapsulamiento en PHP</h1>
+    </div>
     <div class="container mt-5">
-        <div class="container-fluid p-2 bg-primary text-white text-center">
-            <h1>Encapsulamiento en PHP</h1>
-        </div>
 
         <p><strong>Encapsulamiento</strong> significa proteger los datos dentro de un objeto y controlarlos con métodos específicos.</p>
 
@@ -31,20 +30,21 @@
                 Código en PHP (ejemplo de encapsulamiento)
             </div>
             <div class="card-body bg-light">
-<pre><code>&lt;?php
-class Bodega {
-    private $clave = "1234";
+            <pre><code>
+            ?php
+                class Bodega {
+                    private $clave = "1234";
 
-    public function abrirBodega($intento) {
-        if ($intento === $this->clave) {
-            return "Bodega abierta.";
-        } else {
-            return "Acceso denegado. Clave incorrecta.";
-        }
-    }
-}
-?&gt;
-</code></pre>
+                    public function abrirBodega($intento) {
+                        if ($intento === $this->clave) {
+                            return "Bodega abierta.";
+                        } else {
+                            return "Acceso denegado. Clave incorrecta.";
+                        }
+                    }
+                }
+            ?>
+            </code></pre>
             </div>
         </div>
 
@@ -57,16 +57,18 @@ class Bodega {
             <p>Ingresá una clave para intentar abrir la bodega</p>
         </div>
 
-        <form method="post" class="text-center mt-4">
+        <form method="POST" class="text-center mt-4">
             <input type="password" name="clave" placeholder="Ingrese la clave" class="form-control w-25 mx-auto mb-3" required>
             <button type="submit" class="btn btn-success">Abrir Bodega</button>
         </form>
 
         <?php
-        class Bodega {
+        class Bodega
+        {
             private $clave = "2301";
 
-            public function abrirBodega($intento) {
+            public function abrirBodega($intento)
+            {
                 if ($intento === $this->clave) {
                     return "Bodega abierta.";
                 } else {
